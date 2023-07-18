@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+
+/* shard component style */
+
+.btn-bg-white {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.btn-bg-white span {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: all 250ms;
+}
+
+.btn-bg-white:hover {
+  color: white;
+}
+
+.btn-bg-white:hover span {
+  left: 0%;
+}
+
+.btn-bg-black {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+}
+
+.btn-bg-black span {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: all 250ms;
+}
+
+.btn-bg-black:hover {
+  color: black;
+}
+
+.btn-bg-black:hover span {
+  right: 0%;
+}
+
+.input-container {
+  position: relative;
+  margin: 12px 0;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 4px;
+  border: none;
+  outline: none;
+}
+
+.input-container p {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: rgb(219, 2, 2);
+  transform: translateY(100%);
+}
+
+.input-container .bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: silver;
+}
+
+.input-container .highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 250ms;
+  transform: scaleX(0);
+}
+
+.input-container input:focus ~ .highlight {
+  transform: scaleX(1);
+}
+
+
+/* animations */
+
+.fade-up { animation-name: fade-up; animation-fill-mode: forwards; }
+.fade-down { animation-name: fade-down; animation-fill-mode: forwards; }
+.fade-right { animation-name: fade-right; animation-fill-mode: forwards; }
+.fade-left { animation-name: fade-left; animation-fill-mode: forwards; }
+
+.duration-250 { animation-duration: 250ms; }
+.duration-500 { animation-duration: 500ms; }
+.duration-1000 { animation-duration: 1s; }
+
+.delay-250 { animation-delay: 250ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-750 { animation-delay: 750ms; }
+.delay-1000 { animation-delay: 1s; }
+
+@keyframes fade-up {
+  from { transform: translateY(64px); opacity: 0; }  
+  to { transform: translateY(0); opacity: 1; }  
+}
+
+@keyframes fade-down {
+  from { transform: translateY(-64px); opacity: 0; }  
+  to { transform: translateY(0); opacity: 1; }  
+}
+
+@keyframes fade-right {
+  from { transform: translateX(-64px); opacity: 0; }  
+  to { transform: translateX(0); opacity: 1; }  
+}
+
+@keyframes fade-left {
+  from { transform: translateX(64px); opacity: 0; }  
+  to { transform: translateX(0); opacity: 1; }  
+}
