@@ -1,3 +1,5 @@
+import React from "react";
+
 const Button = (props: any) => {
   return (
     <button {...props}>
@@ -6,7 +8,7 @@ const Button = (props: any) => {
         {props.children}
       </div>
     </button>
-  )
-}
+  );
+};
 
 export default Button;

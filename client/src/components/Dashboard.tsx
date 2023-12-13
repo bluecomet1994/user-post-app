@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import Post from "./Post";
 import Link from "next/link";
+import React from "react";
+
+import Post from "./Post";
 
 export default function Dashboard() {
   return (
@@ -13,7 +15,7 @@ export default function Dashboard() {
       <main className="flex justify-center relative w-full min-h-screen">
         <div className="flex justify-start items-center fixed top-0 left-0 w-full h-20 bg-white shadow-xl shadow-gray-200">
           <Link
-            href={''}
+            href={""}
             className="flex justify-center items-center p-8 h-full hover:bg-gray-100 transition-all"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mx-2">
@@ -26,7 +28,7 @@ export default function Dashboard() {
 
         <div className="w-80 mx-8 my-28">
           <div className="flex flex-col items-center fixed w-80 h-1/2 p-8 rounded-sm shadow-2xl">
-            <Image alt="profile_image" src={'/man.jpg'} width={128} height={128} priority />
+            <Image alt="profile_image" src={"/man.jpg"} width={128} height={128} priority />
             <h1 className="font-bold text-xl mt-4 mb-2">Morgan Mastrangelo</h1>
             <p>Saint Petersburg, Florida</p>
             <p>United States</p>
@@ -39,5 +41,5 @@ export default function Dashboard() {
         </div>
       </main>
     </>
-  )
+  );
 }
